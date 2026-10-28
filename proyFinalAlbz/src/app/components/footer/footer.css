@@ -1,0 +1,172 @@
+/* =========================================
+   ESTILOS PARA EL FOOTER - PASTELERÍA / ARTESANAL
+   ========================================= */
+
+/* Contenedor principal del footer */
+.site-footer {
+    background-color: #fffaf0; /* Fondo blanco vainilla / crema suave */
+    color: #6b5344; /* Marrón café suave para los textos generales */
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    border-top: 2px solid #fceade; /* Línea superior delicada en tono rosado */
+    padding-top: 4rem;
+    margin-top: auto; /* Útil si usas Flexbox sticky footer */
+}
+
+/* Contenedor de las columnas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Títulos de las columnas */
+.site-footer h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5c3d2e; /* Marrón chocolate oscuro */
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+/* Pequeño detalle decorativo bajo los títulos */
+.site-footer h3::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #b85d68; /* Acento frambuesa */
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
+/* --- Columna 1: Marca y descripción --- */
+.footer-brand .footer-logo {
+    max-height: 45px; /* Ajusta según el tamaño de tu logo */
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    color: #8c7362;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Columna 2: Enlaces de navegación --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #6b5344;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #b85d68; /* Tono frambuesa al pasar el mouse */
+    padding-left: 5px; /* Pequeño efecto de desplazamiento elegante */
+}
+
+/* --- Columna 3: Información de Contacto --- */
+.footer-contact address {
+    font-style: normal;
+}
+
+.footer-contact p {
+    margin-bottom: 0.6rem;
+    color: #6b5344;
+}
+
+.footer-contact a {
+    color: #b85d68;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #9e4c57;
+    text-decoration: underline;
+}
+
+/* --- Columna 4: Redes Sociales --- */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f7e6e8; /* Fondo rosado pastel suave */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    /* Aplica un filtro opcional para que los iconos combinen con el color chocolate */
+    filter: sepia(1) hue-rotate(330deg) saturate(2);
+}
+
+.social-icons a:hover {
+    background-color: #b85d68;
+    transform: translateY(-3px); /* Efecto flotante al pasar el mouse */
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1); /* Vuelve el icono blanco al hacer hover */
+}
+
+/* --- Barra Inferior: Copyright y Legal --- */
+.footer-bottom {
+    background-color: #fceade; /* Tono rosado cremoso muy suave para separar la base */
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #7a6150;
+    border-top: 1px solid #f2d6cc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.legal-links a {
+    color: #7a6150;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #b85d68;
+    text-decoration: underline;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

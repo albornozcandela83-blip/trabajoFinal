@@ -1,0 +1,34 @@
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.pinimg.com/1200x/9b/8c/a2/9b8ca297c3ca6f5d77d930f89891a5f8.jpg" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/736x/d4/a5/cf/d4a5cf03705751dacc0f176359b1b07b.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/736x/28/28/c6/2828c63e04acee19ab530447aa0a6e50.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container py-4">
+  <div class="d-flex flex-wrap gap-3">
+    @for (p of productos; track p.id) {
+      <app-productocard 
+        [producto]="p" 
+        (eliminado)="onEliminarProducto($event)">
+      </app-productocard>
+    }
+  </div>
+</div>
+

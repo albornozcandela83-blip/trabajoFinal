@@ -1,0 +1,80 @@
+/* =========================================
+   ESTILOS PARA EL CARRUSEL - PASTELERÍA
+   ========================================= */
+
+/* Contenedor principal del carrusel */
+#carouselExample {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(92, 61, 46, 0.12); /* Sombra cálida color chocolate */
+    margin: 2rem auto;
+    max-width: 1200px; /* Puedes ajustarlo al ancho que prefieras */
+    border: 2px solid #fceade; /* Borde delicado en tono rosado suave */
+    background-color: #fffaf0;
+}
+
+/* Imágenes del carrusel */
+.carousel-item img {
+    height: 500px; /* Altura fija recomendada para mantener uniformidad */
+    object-fit: cover; /* Evita que la foto se deforme */
+    filter: brightness(0.96); /* Le da un toque sutilmente más cálido a las fotos */
+    transition: filter 0.3s ease;
+}
+
+/* Botones de navegación (Anterior / Siguiente) */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Fondo circular para las flechas y que destaquen sobre cualquier foto */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(92, 61, 46, 0.7); /* Fondo chocolate semitransparente */
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-size: 45%, 45%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #b85d68; /* Tono frambuesa al pasar el cursor */
+    transform: scale(1.1);
+}
+
+/* Indicadores (los puntitos de la parte inferior) */
+.carousel-indicators [data-bs-target] {
+    background-color: #fceade;
+    border: 1px solid #b85d68;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #b85d68; /* Color frambuesa para el punto activo */
+    width: 26px; /* Se estira ligeramente para indicar la foto actual */
+    border-radius: 6px;
+}
+
+/* Ajustes responsivos para celulares */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px; /* Reducimos la altura en pantallas pequeñas para mejor visualización */
+    }
+    
+    #carouselExample {
+        border-radius: 8px;
+        margin: 1rem;
+    }
+}
