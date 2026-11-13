@@ -1,0 +1,245 @@
+/* =========================================
+   ESTILOS PARA EL CARRUSEL - PASTELERÍA
+   ========================================= */
+
+/* Contenedor principal del carrusel */
+#carouselExample {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(92, 61, 46, 0.12); /* Sombra cálida color chocolate */
+    margin: 2rem auto;
+    max-width: 1200px; /* Puedes ajustarlo al ancho que prefieras */
+    border: 2px solid #fceade; /* Borde delicado en tono rosado suave */
+    background-color: #fffaf0;
+}
+
+/* Imágenes del carrusel */
+.carousel-item img {
+    height: 500px; /* Altura fija recomendada para mantener uniformidad */
+    object-fit: cover; /* Evita que la foto se deforme */
+    filter: brightness(0.96); /* Le da un toque sutilmente más cálido a las fotos */
+    transition: filter 0.3s ease;
+}
+
+/* Botones de navegación (Anterior / Siguiente) */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Fondo circular para las flechas y que destaquen sobre cualquier foto */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(92, 61, 46, 0.7); /* Fondo chocolate semitransparente */
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-size: 45%, 45%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #b85d68; /* Tono frambuesa al pasar el cursor */
+    transform: scale(1.1);
+}
+
+/* Indicadores (los puntitos de la parte inferior) */
+.carousel-indicators [data-bs-target] {
+    background-color: #fceade;
+    border: 1px solid #b85d68;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #b85d68; /* Color frambuesa para el punto activo */
+    width: 26px; /* Se estira ligeramente para indicar la foto actual */
+    border-radius: 6px;
+}
+
+/* Ajustes responsivos para celulares */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px; /* Reducimos la altura en pantallas pequeñas para mejor visualización */
+    }
+    
+    #carouselExample {
+        border-radius: 8px;
+        margin: 1rem;
+    }
+}
+/*PRODUCTOS DESTACADOS */
+.productos-inicio {
+  background-color: #fffaf7;
+  padding: 55px 6%;
+}
+
+/* Título */
+
+.titulo-productos {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-productos h1 {
+  color: #bd8298;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.titulo-productos p {
+  color: #806c65;
+  font-size: 16px;
+}
+
+/* Tarjetas */
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Botón ver más */
+
+.ver-mas {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ver-mas a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #bd8298;
+  padding: 12px 28px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.ver-mas a:hover {
+  background-color: #a96e85;
+}
+
+/* Adaptación */
+
+@media (max-width: 900px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-productos h2 {
+    font-size: 28px;
+  }
+}
+
+
+/* CARRITO DE COMPRAS */
+.carrito {
+  background-color: #fffaf7;
+  max-width: 750px;
+  width: 90%;
+  margin: 45px auto 60px;
+  padding: 30px;
+  border: 1px solid #f0dce3;
+  border-radius: 20px;
+  box-shadow: 0 5px 18px rgba(120, 90, 80, 0.10);
+  color: #806c65;
+}
+
+.carrito h2 {
+  text-align: center;
+  color: #bd8298;
+  font-size: 27px;
+  margin-bottom: 25px;
+}
+
+.carrito p {
+  text-align: center;
+  padding: 15px;
+  color: #9b8982;
+}
+
+.producto-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 5px;
+  border-bottom: 1px solid #f0dce3;
+}
+
+.producto-carrito button {
+  border: none;
+  background-color: #f3e5e9;
+  color: #a96e85;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.total {
+  text-align: right;
+  color: #a96e85;
+  font-size: 21px;
+  margin-top: 25px;
+}
+
+.btn-vaciar,
+.btn-comprar {
+  padding: 11px 23px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  margin: 15px 8px 0 0;
+  transition: 0.3s;
+}
+
+.btn-vaciar {
+  background-color: #f3e5e9;
+  color: #806c65;
+}
+
+.btn-comprar {
+  background-color: #bd8298;
+  color: white;
+}
+
+.btn-vaciar:hover {
+  background-color: #ead1da;
+}
+
+.btn-comprar:hover {
+  background-color: #a96e85;
+}
+
+@media (max-width: 550px) {
+  .carrito {
+    padding: 20px;
+  }
+
+  .producto-carrito {
+    font-size: 14px;
+  }
+}

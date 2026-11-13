@@ -1,0 +1,42 @@
+
+<div class="container py-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+    @for (p of lista; track p.id) {
+      <div class="col">
+        <app-productocard 
+           [producto]="p"
+          (agregar)="agregarAlCarrito($event)">
+        </app-productocard>
+      </div>
+    }
+  </div>
+</div>
+
+<section class="carrito">
+  <h2>♡ Mi carrito</h2>
+
+  @if (carrito.length === 0) {
+    <p>Tu carrito está vacío.</p>
+  } @else {
+    @for (producto of carrito; track $index) {
+      <div class="producto-carrito">
+        <span>{{ producto.nombre }}</span>
+        <span>${{ producto.precio }}</span>
+
+        <button (click)="quitarDelCarrito($index)">✕</button>
+      </div>
+    }
+
+    <div class="total">
+      <strong>Total: ${{ total }}</strong>
+    </div>
+
+    <button class="btn-vaciar" (click)="vaciarCarrito()">
+      Vaciar carrito
+    </button>
+
+    <button class="btn-comprar" (click)="vaciarCarrito()">
+      Finalizar compra
+    </button>
+  }
+</section>

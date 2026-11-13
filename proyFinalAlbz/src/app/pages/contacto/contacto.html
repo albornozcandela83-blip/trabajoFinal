@@ -1,0 +1,95 @@
+
+<div class="contacto-container">
+
+  <section class="encabezado-contacto">
+    <h1>¡Contactanos!</h1>
+    <p>
+      ¿Tenés alguna consulta o querés realizar un pedido?
+      Estamos para ayudarte.
+    </p>
+  </section>
+
+  <div class="contacto-contenido">
+
+    <!-- Formulario -->
+
+    <section class="formulario-contacto">
+
+      <h2>Envianos un mensaje</h2>
+
+      <form (submit)="enviarMensaje(); $event.preventDefault()">
+
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresá tu nombre"
+          [(ngModel)]="nombre"
+          required
+        >
+
+        <label for="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Ingresá tu correo"
+          [(ngModel)]="email"
+          required
+        >
+
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="5"
+          placeholder="Escribí tu consulta..."
+          [(ngModel)]="mensaje"
+          required
+        ></textarea>
+
+        <button type="submit">
+          Enviar mensaje
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- Información de contacto -->
+
+    <section class="informacion-contacto">
+
+      <h2>Información de contacto</h2>
+
+      <div class="dato-contacto">
+        <h3>♡ Ubicación</h3>
+        <p>Cipolletti, Río Negro, Argentina</p>
+      </div>
+
+      <div class="dato-contacto">
+        <h3>♡ Instagram</h3>
+        <a href="https://www.instagram.com/" target="_blank">
+          Seguinos en Instagram
+        </a>
+      </div>
+
+      <div class="dato-contacto">
+        <h3>♡ Horarios</h3>
+        <p>Lunes a sábados</p>
+        <p>Consultar disponibilidad</p>
+      </div>
+
+      <div class="dato-contacto">
+        <h3>♡ Pedidos</h3>
+        <p>Consultá por nuestros productos y encargos.</p>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
+
+

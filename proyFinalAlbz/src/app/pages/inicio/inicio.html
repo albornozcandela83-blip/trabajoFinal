@@ -1,0 +1,70 @@
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.pinimg.com/1200x/63/0a/1f/630a1f465c4ac9c43aab259a4535ac93.jpg" class="d-block w-100" alt="">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/1200x/4d/66/7a/4d667af99db1974ba26e61027973c7b6.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/736x/37/61/d2/3761d20c52c07be5f67bbc8bfc5debdd.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<section class="productos-inicio">
+
+  <div class="titulo-productos">
+    <h1>Nuestras delicias</h1>
+    <p>Pequeños placeres hechos con mucho amor ♡</p>
+  </div>
+
+  <div class="contenedor-productos">
+
+    @for (p of productos; track p.id) {
+    <app-productocard
+      [producto]="p"
+      (agregar)="agregarAlCarrito($event)">
+    </app-productocard>
+  }
+
+  </div>
+
+  
+  <div class="ver-mas">
+    <a routerLink="/productos">Ver todos los productos</a>
+  </div>
+
+</section>
+<section class="carrito">
+  <h2>♡ Mi carrito</h2>
+
+  @if (carritoService.carrito.length === 0) {
+    <p>Tu carrito está vacío.</p>
+  } @else {
+    @for (p of carritoService.carrito; track $index) {
+      <div class="producto-carrito">
+        <span>{{ p.nombre }}</span>
+        <span>${{ p.precio }}</span>
+        <button (click)="carritoService.quitar($index)">✕</button>
+      </div>
+    }
+
+    <h3>Total: ${{ carritoService.total }}</h3>
+
+    <button (click)="carritoService.vaciar()">Vaciar carrito</button>
+  }
+</section>
+
+

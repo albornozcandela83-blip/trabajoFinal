@@ -1,0 +1,128 @@
+
+.contacto-container {
+  background-color: #fffaf7;
+  padding: 45px 8%;
+  color: #59443f;
+  min-height: 80vh;
+}
+
+/* Encabezado */
+
+.encabezado-contacto {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.encabezado-contacto h1 {
+  color: #bd8298;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.encabezado-contacto p {
+  color: #806c65;
+  font-size: 17px;
+}
+
+/* Distribución */
+
+.contacto-contenido {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 35px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Formulario */
+
+.formulario-contacto {
+  background-color: #f8e9e9;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.formulario-contacto h2,
+.informacion-contacto h2 {
+  color: #b47791;
+  margin-bottom: 25px;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto label {
+  margin-bottom: 8px;
+  color: #59443f;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #e4caca;
+  border-radius: 8px;
+  background-color: #fffaf7;
+  outline: none;
+  font-family: inherit;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #bd8298;
+}
+
+.formulario-contacto button {
+  padding: 12px;
+  background-color: #bd8298;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #a96e85;
+}
+
+/* Información */
+
+.informacion-contacto {
+  padding: 25px;
+}
+
+.dato-contacto {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eadbd5;
+}
+
+.dato-contacto h3 {
+  color: #b47791;
+  font-size: 18px;
+}
+
+.dato-contacto p,
+.dato-contacto a {
+  color: #806c65;
+  text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-contacto h1 {
+    font-size: 32px;
+  }
+
+  .formulario-contacto {
+    padding: 20px;
+  }
+}
